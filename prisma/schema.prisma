@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Organization {
+  id     String @id @default(uuid())
+  name   String
+  domain String @unique
+  users  User[]
+}
+
+model User {
+  id                  String            @id @default(uuid())
+  email               String            @unique
+  name                String?
+  surname             String?
+  position            String?
+  birthday            DateTime?
+  join_date           DateTime?
+  role                String            @default("EMPLOYEE")
+  password            String
+  resetToken          String?
+  resetTokenExpiry    DateTime?
+  organizationId      String
+  saldo_dias_corridos Int               @default(0)
+  saldo_dias_habiles  Int               @default(0)
+  organization        Organization      @relation(fields: [organizationId], references: [id])
+  approvals           VacationRequest[] @relation("ApprovedBy")
+  requests            VacationRequest[] @relation("UserRequests")
+}
+
+model Holiday {
+  id          String   @id @default(uuid())
+  date        DateTime @unique
+  description String
+}
+
+model VacationRequest {
+  id               String   @id @default(uuid())
+  userId           String
+  startDate        DateTime
+  endDate          DateTime
+  requestType      String
+  daysUsedCorridos Int
+  daysUsedHabiles  Int
+  status           String   @default("PENDING")
+  approverId       String?
+  createdAt        DateTime @default(now())
+  approver         User?    @relation("ApprovedBy", fields: [approverId], references: [id])
+  user             User     @relation("UserRequests", fields: [userId], references: [id])
+}

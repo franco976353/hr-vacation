@@ -1,0 +1,60 @@
+.glow-button {
+    position: relative;
+    padding: 12px 28px;
+    background-color: var(--deep-bg);
+    /* Dark background profundo */
+    color: var(--foreground);
+    border: 1px solid rgba(0, 195, 255, 0.2);
+    /* Borde sutil Metallic Blue */
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
+
+    /* Fallbacks por defecto si el mouse no está encima */
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+}
+
+.glow-button:active {
+    transform: scale(0.98);
+}
+
+/* El resplandor interno dinámico */
+.glow-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at var(--mouse-x) var(--mouse-y),
+            rgba(0, 195, 255, 0.4) 0%,
+            /* Electric Blue */
+            transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    pointer-events: none;
+    /* Crucial para no bloquear el clic real */
+}
+
+.glow-button:hover {
+    border-color: rgba(0, 195, 255, 0.8);
+    box-shadow: 0 0 20px rgba(0, 195, 255, 0.15);
+    /* Sombreado exterior ambiente */
+}
+
+.glow-button:hover::before {
+    opacity: 1;
+    /* Ilumina progresivamente al entrar el mouse */
+}
+
+.glow-button-content {
+    position: relative;
+    z-index: 2;
+    /* Texto por encima del efecto luz */
+    pointer-events: none;
+}

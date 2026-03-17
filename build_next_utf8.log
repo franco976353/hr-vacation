@@ -1,0 +1,239 @@
+﻿
+> hr-vacation@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+- Environments: .env
+
+node.exe : ΓÜá The 
+"middleware" file convention 
+is deprecated. Please use 
+"proxy" instead. Learn more: 
+https://nextjs.org/docs/messa
+ges/middleware-to-proxy
+En línea: 1 Carácter: 1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (ΓÜá The  
+   "middle...leware-to-pro   
+ xy:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build 
+failed with 3 errors:
+./src/actions/auth-actions.ts
+:5:1
+Module not found: Can't 
+resolve 'bcryptjs'
+[0m [90m 3 |[39m 
+[36mimport[39m { signIn } 
+[36mfrom[39m 
+[32m"@/auth"[39m[33m;[39m
+ [90m 4 |[39m 
+[36mimport[39m { prisma } 
+[36mfrom[39m [32m"@/lib/pr
+isma"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 
+|[39m [36mimport[39m 
+bcrypt [36mfrom[39m [32m"b
+cryptjs"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[2
+2m[39m[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[2
+2m[39m
+ [90m 6 |[39m 
+[36mimport[39m { 
+[33mAuthError[39m } 
+[36mfrom[39m [32m"next-aut
+h"[39m[33m;[39m
+ [90m 7 |[39m 
+[36mimport[39m crypto 
+[36mfrom[39m 
+[32m'crypto'[39m[33m;[39m
+ [90m 8 |[39m 
+[36mimport[39m { 
+sendPasswordResetEmail } 
+[36mfrom[39m [32m"@/lib/ma
+il"[39m[33m;[39m[0m
+
+
+
+https://nextjs.org/docs/messa
+ges/module-not-found
+
+
+./src/auth.ts:6:1
+Module not found: Can't 
+resolve 'bcryptjs'
+[0m [90m 4 |[39m 
+[36mimport[39m { prisma } 
+[36mfrom[39m [32m"@/lib/pr
+isma"[39m[33m;[39m
+ [90m 5 |[39m 
+[36mimport[39m 
+[33mCredentials[39m 
+[36mfrom[39m [32m'next-aut
+h/providers/credentials'[39m
+[33m;[39m
+[31m[1m>[22m[39m[90m 6 
+|[39m [36mimport[39m 
+bcrypt [36mfrom[39m [32m'b
+cryptjs'[39m[33m;[39m
+ [90m   |[39m [31m[1m^[2
+2m[39m[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[2
+2m[39m
+ [90m 7 |[39m
+ [90m 8 |[39m 
+[36mexport[39m 
+[36mconst[39m { 
+handlers[33m,[39m 
+auth[33m,[39m 
+signIn[33m,[39m signOut } 
+[33m=[39m 
+[33mNextAuth[39m({
+ [90m 9 |[39m     [33m...
+[39mauthConfig[33m,[39m[0m
+
+
+
+Import traces:
+  #1 [App Route]:
+    ./src/auth.ts
+    ./src/app/api/auth/[...ne
+xtauth]/route.ts
+
+  #2 [Server Component]:
+    ./src/auth.ts
+    
+./src/actions/auth-actions.ts
+
+  #3 [Server Component]:
+    ./src/auth.ts
+    ./src/app/admin/page.tsx
+
+https://nextjs.org/docs/messa
+ges/module-not-found
+
+
+./src/lib/mail.ts:1:1
+Module not found: Can't 
+resolve 'nodemailer'
+[0m[31m[1m>[22m[39m[90m
+ 1 |[39m [36mimport[39m 
+nodemailer [36mfrom[39m [3
+2m'nodemailer'[39m[33m;[39
+m
+ [90m   |[39m [31m[1m^[2
+2m[39m[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m
+^[22m[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m[31m[
+1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m[39m[3
+1m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[22m[39
+m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[
+39m[31m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[2
+2m[39m[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m
+^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m 
+[36mexport[39m 
+[36masync[39m 
+[36mfunction[39m sendPasswo
+rdResetEmail(email[33m:[39m
+ string[33m,[39m 
+token[33m:[39m string) {
+ [90m 4 |[39m     [90m// 
+Generar cuenta de prueba 
+para desarrollo si no hay 
+configurado un SMTP[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/lib/mail.ts
+    
+./src/actions/auth-actions.ts
+
+https://nextjs.org/docs/messa
+ges/module-not-found
+
+
+    at <unknown> (./src/actio
+ns/auth-actions.ts:5:1)
+    at <unknown> (https://nex
+tjs.org/docs/messages/module-
+not-found)
+    at <unknown> 
+(./src/auth.ts:6:1)
+    at <unknown> (https://nex
+tjs.org/docs/messages/module-
+not-found)
+    at <unknown> 
+(./src/lib/mail.ts:1:1)
+    at <unknown> (https://nex
+tjs.org/docs/messages/module-
+not-found)

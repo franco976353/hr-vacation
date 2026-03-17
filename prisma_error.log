@@ -1,0 +1,9 @@
+Datasource "db": PostgreSQL database "dev.db", schema "public" at "file:./dev.db"
+
+Loaded Prisma config from prisma.config.ts.
+
+Prisma schema loaded from prisma\schema.prisma.
+Error: P1013
+
+The provided database string is invalid. `datasource.url` in `prisma.config.ts` is invalid: must start with the protocol `postgresql://` or `postgres://`.
+

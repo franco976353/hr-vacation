@@ -1,0 +1,12 @@
+{
+    "css.customData": [
+        ".vscode/tailwind.json"
+    ],
+    "css.validate": false,
+    "tailwindCSS.experimental.classRegex": [
+        "class:\\s*?[\"'`]([^\"'`]*).*?,"
+    ],
+    "tailwindCSS.includeLanguages": {
+        "plaintext": "css"
+    }
+}
